@@ -134,7 +134,6 @@ class DealTypesActivity : AppCompatActivity(), CoroutineScope {
                 Toast.makeText(this, "Введите корректный тип сделки (только буквы)", Toast.LENGTH_SHORT).show()
             }
         }
-
         dialog.show()
     }
 

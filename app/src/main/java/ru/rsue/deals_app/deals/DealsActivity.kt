@@ -1,7 +1,6 @@
 package ru.rsue.deals_app.deals
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -11,14 +10,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.*
-import retrofit2.Response
-import kotlin.coroutines.CoroutineContext
 import ru.rsue.deals_app.R
-import ru.rsue.deals_app.api.*
+import ru.rsue.deals_app.api.ApiFactory
 import ru.rsue.deals_app.currencies.Currency
 import ru.rsue.deals_app.databinding.ActivityDealsBinding
 import ru.rsue.deals_app.places.DealPlace
 import ru.rsue.deals_app.types.DealType
+import kotlin.coroutines.CoroutineContext
 
 class DealsActivity : AppCompatActivity(), CoroutineScope {
     private lateinit var binding: ActivityDealsBinding
@@ -30,10 +28,8 @@ class DealsActivity : AppCompatActivity(), CoroutineScope {
     private val places = mutableListOf<DealPlace>()
     private val currencies = mutableListOf<Currency>()
 
-    // Инициализация Job для работы с корутинами
     private val job = Job()
 
-    // Определение контекста корутины
     override val coroutineContext: CoroutineContext
         get() = Dispatchers.Main + job
 
