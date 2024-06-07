@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnDealTypes"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/deal_types"
+        android:background="@drawable/button_background"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"/>
+
+    <Button
+        android:id="@+id/btnDealPlaces"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/deal_place"
+        android:background="@drawable/button_background"
+        android:layout_below="@id/btnDealTypes"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnCurrencies"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/currencies"
+        android:background="@drawable/button_background"
+        android:layout_below="@id/btnDealPlaces"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnDeals"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/deals"
+        android:background="@drawable/button_background"
+        android:layout_below="@id/btnCurrencies"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+</RelativeLayout>
+
+
+
